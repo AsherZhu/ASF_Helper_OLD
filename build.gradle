@@ -1,0 +1,57 @@
+group 'ssh'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+/*repositories {
+    mavenCentral()
+}*/
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        jcenter()
+    }
+}
+
+dependencies {
+
+    /* Hibernate*/
+    compile 'org.hibernate:hibernate-ehcache:5.2.11.Final'
+
+    /*struts2*/
+    compile 'org.apache.struts:struts2-convention-plugin:2.5.13'
+    compile 'org.apache.struts:struts2-spring-plugin:2.5.13'
+
+    /*Spring*/
+    compile 'org.springframework:spring-core:5.0.3.RELEASE'
+    compile 'org.springframework:spring-beans:5.0.3.RELEASE'
+    compile 'org.springframework:spring-web:5.0.3.RELEASE'
+    compile 'org.springframework:spring-context:5.0.3.RELEASE'
+    compile 'org.springframework:spring-orm:5.0.3.RELEASE'
+    compile 'org.springframework:spring-context-support:5.0.3.RELEASE'
+
+    /*jackson*/
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.2'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.2'
+
+    /*fastjson*/
+    compile 'com.alibaba:fastjson:1.2.45'
+
+    /*shiro*/
+//    compile 'org.apache.shiro:shiro-all:1.4.0'
+
+
+    compile 'javax:javaee-api:8.0'
+    compile 'mysql:mysql-connector-java:6.0.6'
+    compile 'com.alibaba:druid:1.1.4'
+    compile 'org.aspectj:aspectjweaver:1.8.11'
+    compile 'javax.mail:javax.mail-api:1.6.0'
+    compile 'commons-beanutils:commons-beanutils:1.9.3'
+
+
+}
