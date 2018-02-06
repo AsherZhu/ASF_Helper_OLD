@@ -11,6 +11,11 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <script type="text/javascript">
+      <%--window.location.href = "${pageContext.request.contextPath}/manage/UserManager.html"--%>
+      <%--window.location.href = "${pageContext.request.contextPath}home.html"--%>
+      window.location.href = "${pageContext.request.contextPath}login.html"
+
+  </script>
   </body>
 </html>
