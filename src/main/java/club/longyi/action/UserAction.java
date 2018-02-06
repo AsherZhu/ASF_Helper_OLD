@@ -77,6 +77,7 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 			userService.save(user);
 			out.print("5");
 		} catch (Exception e) {
+			System.out.println("------"+e.getMessage()+"------");
 			if(e.getMessage().equals("UsernameAlreadyExist")) {
 				//用户名已经存在
 				out.print("2");
@@ -134,6 +135,9 @@ public class UserAction extends BaseAction implements ModelDriven<User> {
 			info = userService.findByUsername(val);
 		}
 		if(ty.equals("email")) {
+			info = userService.findByEmail(val);
+		}
+		if(ty.equals("taobaoId")) {
 			info = userService.findByEmail(val);
 		}
 		if(info==null) {

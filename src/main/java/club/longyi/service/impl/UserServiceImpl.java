@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 		//email如果存在抛出“EmailAlreadyExist”运行时异常
 		if(dao.findOneByProperty(User.class, "email", user.getEmail())!=null)throw new RuntimeException("EmailAlreadyExist");
 		//email如果存在抛出“EmailAlreadyExist”运行时异常
-		if(dao.findOneByProperty(User.class, "email", user.getTaobaoId())!=null)throw new RuntimeException("taobaoIdAlreadyExist");
+		if(dao.findOneByProperty(User.class, "taobaoId", user.getTaobaoId())!=null)throw new RuntimeException("taobaoIdAlreadyExist");
 
 		//密码md5加盐处理
 //		user.setPassword(DigestHelper.digest(user.getPassword(), DigestHelper.MD5));
